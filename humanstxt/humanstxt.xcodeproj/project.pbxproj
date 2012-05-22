@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		463A2B0F156BCC0700414F84 /* NSString+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 463A2B0E156BCC0700414F84 /* NSString+BaseKit.m */; };
 		464907F4156A737C007078EB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 464907F3156A737C007078EB /* UIKit.framework */; };
 		464907F6156A737C007078EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 464907F5156A737C007078EB /* Foundation.framework */; };
 		464907F8156A737C007078EB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 464907F7156A737C007078EB /* CoreGraphics.framework */; };
@@ -15,9 +16,12 @@
 		46490804156A737C007078EB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46490803156A737C007078EB /* AppDelegate.m */; };
 		46490807156A737C007078EB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46490806156A737C007078EB /* ViewController.m */; };
 		4649080A156A737C007078EB /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46490808156A737C007078EB /* ViewController.xib */; };
+		46490812156A73FF007078EB /* LSHumanTXTParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 46490811156A73FF007078EB /* LSHumanTXTParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		463A2B0D156BCC0600414F84 /* NSString+BaseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+BaseKit.h"; sourceTree = "<group>"; };
+		463A2B0E156BCC0700414F84 /* NSString+BaseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+BaseKit.m"; sourceTree = "<group>"; };
 		464907EF156A737C007078EB /* humanstxt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = humanstxt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		464907F3156A737C007078EB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		464907F5156A737C007078EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -31,6 +35,8 @@
 		46490805156A737C007078EB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		46490806156A737C007078EB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		46490809156A737C007078EB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		46490810156A73FF007078EB /* LSHumanTXTParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSHumanTXTParser.h; sourceTree = "<group>"; };
+		46490811156A73FF007078EB /* LSHumanTXTParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSHumanTXTParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,10 @@
 		464907F9156A737C007078EB /* humanstxt */ = {
 			isa = PBXGroup;
 			children = (
+				463A2B0D156BCC0600414F84 /* NSString+BaseKit.h */,
+				463A2B0E156BCC0700414F84 /* NSString+BaseKit.m */,
+				46490810156A73FF007078EB /* LSHumanTXTParser.h */,
+				46490811156A73FF007078EB /* LSHumanTXTParser.m */,
 				46490802156A737C007078EB /* AppDelegate.h */,
 				46490803156A737C007078EB /* AppDelegate.m */,
 				46490805156A737C007078EB /* ViewController.h */,
@@ -164,6 +174,8 @@
 				46490800156A737C007078EB /* main.m in Sources */,
 				46490804156A737C007078EB /* AppDelegate.m in Sources */,
 				46490807156A737C007078EB /* ViewController.m in Sources */,
+				46490812156A73FF007078EB /* LSHumanTXTParser.m in Sources */,
+				463A2B0F156BCC0700414F84 /* NSString+BaseKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +287,7 @@
 				4649080F156A737C007078EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

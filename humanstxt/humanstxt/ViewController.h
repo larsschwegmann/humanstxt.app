@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LSHumanTXTParser.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <LSHumanTXTParserDelegate>{
+    
+}
 
 @end
