@@ -11,6 +11,9 @@
 
 @interface ViewController : UIViewController <LSHumanTXTParserDelegate>{
     
+    IBOutlet UITextField *urlField;
 }
+- (IBAction)getHumansDotTXT:(id)sender;
+@property (strong, nonatomic) IBOutlet UITextField *urlField;
 
 @end
