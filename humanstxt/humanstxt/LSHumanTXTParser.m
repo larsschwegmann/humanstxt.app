@@ -25,14 +25,38 @@
 }
 
 -(void)startParsing{
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
-    theConnection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-    if (theConnection) {
-        theData = [[NSMutableData alloc] init];
-        NSLog(@"LSHumanTXTParser -> URL Connection successfully instantiated!");
+    int existsResult = [self humanstxtExists:url];
+    if (existsResult == 200) {
+        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
+        theConnection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+        if (theConnection) {
+            theData = [[NSMutableData alloc] init];
+            NSLog(@"LSHumanTXTParser -> URL Connection successfully instantiated!");
+        }else{
+            NSLog(@"LSHumanTXTParser -> there was an error instantiating the url connection!");
+        }
     }else{
-        NSLog(@"LSHumanTXTParser -> there was an error instantiating the url connection!");
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+        if (existsResult == 404) {
+            NSLog(@"LSHumanTXTParser -> ERROR 404: NO humans.txt file!");
+            [delegate didFailWithError:@"Error 404"];
+        }else{
+            NSLog(@"LSHumanTXTParser -> HTTP error %d", existsResult);
+            [delegate didFailWithError:@"Unknown HTTP Error"];
+        }
+        
     }
+    
+}
+
+-(int)humanstxtExists:(NSString *)urlString{    
+    NSURLRequest* request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:5.0];
+    NSHTTPURLResponse* response = nil;
+    NSError* error = nil;
+    [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    NSLog(@"statusCode = %d", [response statusCode]);
+    
+    return [response statusCode];
 }
 
 -(NSArray *)parseHumansDotTXTFileString:(NSString *)theContent{
@@ -88,7 +112,7 @@
 -(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error{
     if (connection == theConnection) {
         NSLog(@"LSHumanTXTParser -> URL connection failed with error: %@", error.description);
-        [delegate didFailWithError:error];
+        [delegate didFailWithError:error.description];
     }
 }
 

@@ -56,6 +56,7 @@
                 theParser = [[LSHumanTXTParser alloc] initWithURLString:[NSString stringWithFormat:@"%@/humans.txt",theSearchBar.text] delegate:self];
             }
         }
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
         [theParser startParsing];
     }else{
         NSLog(@"ERROR: the URL is not valid: %@", theSearchBar.text);
@@ -65,8 +66,17 @@
 
 #pragma mark LSHumanTXTParserDelegate
 
--(void)didFailWithError:(NSError *)error{
-    NSLog(@"LSHumanTXTParser -> didFailWithError: %@", error.description);
+-(void)didFailWithError:(NSString *)errorDescription{
+    NSLog(@"LSHumanTXTParser -> didFailWithError: %@",errorDescription);
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+    if ([errorDescription isEqualToString:@"Error 404"]) {
+        //Error 404
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No humans.txt :(" message:@"It seems that this website doesn't support humans.txt yet. Send them a message to tell them about humans.txt and spread the word." delegate:self cancelButtonTitle:@"OK, I'll do that!" otherButtonTitles:nil];
+        [alert show];
+    }else if ([errorDescription isEqualToString:@"Unknown HTTP Error"]){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No humans.txt :(" message:@"There was an error while fetching humans.txt! Please check if you typed everything correctly." delegate:self cancelButtonTitle:@"OK, I'll do that!" otherButtonTitles:nil];
+        [alert show];
+    }
 }
 
 -(void)didSucceedWithInfo:(NSArray *)info{
@@ -85,6 +95,7 @@
             [theHumanTXTObjects addObject:obj];
         }
     }
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     [theTableView reloadData];
 }
 
@@ -221,9 +232,9 @@
     }
     
     NSDictionary *dict = [theHumanTXTObjects objectAtIndex:indexPath.row+minusRows];
-    NSLog(@"original indexpath.section: %d", indexPath.section);
-    NSLog(@"modified version of indexPath.section: %d", indexPath.section+1);
-    NSLog(@"section of content dictionary: %d", [[dict objectForKey:@"section"] intValue]);
+    //NSLog(@"original indexpath.section: %d", indexPath.section);
+    //NSLog(@"modified version of indexPath.section: %d", indexPath.section+1);
+    //NSLog(@"section of content dictionary: %d", [[dict objectForKey:@"section"] intValue]);
     
     [cell.textLabel setText:[dict objectForKey:@"content"]];
     [cell.textLabel setBackgroundColor:[UIColor clearColor]];

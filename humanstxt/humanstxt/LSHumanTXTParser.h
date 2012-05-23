@@ -12,7 +12,7 @@
 
 @optional
 -(void)didSucceedWithInfo:(NSArray *)info;
--(void)didFailWithError:(NSError *)error;
+-(void)didFailWithError:(NSString *)errorDescription;
 
 @end
 
@@ -29,5 +29,6 @@
 -(NSArray *)parseHumansDotTXTFileString:(NSString *)theContent;
 -(id)initWithURLString:(NSString *)urlString delegate:(id)clientDelegate;
 -(void)startParsing;
+-(int)humanstxtExists:(NSString *)urlString;
 
 @end

@@ -74,6 +74,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		463A2B45156D5ED900414F84 /* third party */ = {
+			isa = PBXGroup;
+			children = (
+				463A2B0D156BCC0600414F84 /* NSString+BaseKit.h */,
+				463A2B0E156BCC0700414F84 /* NSString+BaseKit.m */,
+			);
+			name = "third party";
+			sourceTree = "<group>";
+		};
 		464907E4156A737B007078EB = {
 			isa = PBXGroup;
 			children = (
@@ -105,8 +114,7 @@
 		464907F9156A737C007078EB /* humanstxt */ = {
 			isa = PBXGroup;
 			children = (
-				463A2B0D156BCC0600414F84 /* NSString+BaseKit.h */,
-				463A2B0E156BCC0700414F84 /* NSString+BaseKit.m */,
+				463A2B45156D5ED900414F84 /* third party */,
 				46490810156A73FF007078EB /* LSHumanTXTParser.h */,
 				46490811156A73FF007078EB /* LSHumanTXTParser.m */,
 				46490802156A737C007078EB /* AppDelegate.h */,
