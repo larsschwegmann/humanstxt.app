@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "LSHumanTXTParser.h"
 #import "NSString+BaseKit.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface ViewController ()
 
@@ -135,6 +136,57 @@
         }
     }
     return headingString;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    UIView *headerView;
+    UIImageView *background;
+    //UIView *status;
+    
+    headerView = [[UIView alloc] init];
+    background = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 22)];
+    background.image = [UIImage imageNamed:@"tableheader"];
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, 200, 10)];
+    label.backgroundColor = [UIColor clearColor];
+    label.font = [UIFont boldSystemFontOfSize:14];
+    label.text = [self tableView:theTableView titleForHeaderInSection:section];
+    /*
+     if ([label.text isEqualToString:@"Online"]) {
+     label.textColor = [UIColor greenColor];
+     }else if([label.text isEqualToString:@"Away"]){
+     label .textColor = [UIColor yellowColor];
+     }else if([label.text isEqualToString:@"Offline"]){
+     label.textColor = [UIColor redColor];
+     }
+     label.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];*/
+    label.textColor = [UIColor grayColor];
+    
+    //status = [[UIView alloc] initWithFrame:CGRectMake(265, 0, 70, 22)];
+    //status.layer.cornerRadius = 10.0f;
+    //status.layer.masksToBounds = YES;
+    //status.backgroundColor = [UIColor clearColor];
+    
+    /*if ([label.text isEqualToString:NSLocalizedString(@"Online",@"Online string which is shown in a tableview header")]) {
+        //label.textColor = [UIColor greenColor];
+        //status.image = [UIImage imageNamed:@"online"];
+        status.backgroundColor = [UIColor colorWithRed:(155.0/255.0) green:(216.0/255.0) blue:(1.0/255.0) alpha:1.0f];
+    }else if([label.text isEqualToString:NSLocalizedString(@"Away",@"Away string which is shown in a tableview header")]){
+        //status.image = [UIImage imageNamed:@"away"];
+        //label .textColor = [UIColor yellowColor];
+        status.backgroundColor = [UIColor yellowColor];
+    }else if([label.text isEqualToString:NSLocalizedString(@"Offline",@"Offline string which is shown in a tableview header")]){
+        //status.image = [UIImage imageNamed:@"offline"];
+        //label.textColor = [UIColor redColor];
+        status.backgroundColor = [UIColor colorWithRed:(210.0/255.0) green:(62.0/255.0) blue:(69.0/255.0) alpha:1.0f];
+    }*/
+    
+    
+    [headerView addSubview:background];
+    [headerView addSubview:label];
+    //[headerView addSubview:status];
+    return headerView;
+
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
