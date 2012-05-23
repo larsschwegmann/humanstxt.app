@@ -9,7 +9,7 @@ License
 -------
 In addition to the BSD-2 license below, I ask that you do not publicly distribute the app as a whole in binary form (e.g. on the App Store).
 
-    Copyright (c) 2011, Ole Zorn
+    Copyright (c) 2012, Lars Schwegmann
     All rights reserved.
 
     Redistribution and use in source and binary forms, with or without
