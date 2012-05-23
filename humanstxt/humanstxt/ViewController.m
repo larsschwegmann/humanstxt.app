@@ -116,6 +116,14 @@
 
 -(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
     //[self getHumansDotTXT];
+    if ([searchText isEqualToString:@""]) {
+        
+    }
+    theHumanTXTHeadings = nil;
+    theHumanTXTObjects = nil;
+    theHumanTXTHeadings = [[NSMutableArray alloc] init];
+    theHumanTXTObjects = [[NSMutableArray alloc] init];
+    [theTableView reloadData];
 }
 
 #pragma mark UITableViewDataSource
