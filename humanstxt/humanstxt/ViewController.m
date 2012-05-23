@@ -21,7 +21,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    allroundIndexPathRow = 0;
     theHumanTXTObjects = [[NSMutableArray alloc] init];
     theHumanTXTHeadings = [[NSMutableArray alloc] init];
 	// Do any additional setup after loading the view, typically from a nib.
@@ -72,7 +71,8 @@
 -(void)didSucceedWithInfo:(NSArray *)info{
     NSLog(@"SUCCESS!!!");
     //reallocate to remove old object dictionarys
-    allroundIndexPathRow = 0;
+    theHumanTXTObjects = nil;
+    theHumanTXTHeadings = nil;
     theHumanTXTObjects = [[NSMutableArray alloc] init];
     theHumanTXTHeadings = [[NSMutableArray alloc] init];
     for (NSDictionary *obj in info) {
@@ -165,7 +165,6 @@
     
     
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    allroundIndexPathRow++;
     return cell;
 }
 
