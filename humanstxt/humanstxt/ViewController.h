@@ -9,11 +9,24 @@
 #import <UIKit/UIKit.h>
 #import "LSHumanTXTParser.h"
 
-@interface ViewController : UIViewController <LSHumanTXTParserDelegate>{
+@interface ViewController : UIViewController <LSHumanTXTParserDelegate, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate>{
+    //Instance Variables
+    LSHumanTXTParser *theParser;
     
-    IBOutlet UITextField *urlField;
+    //IB Properties
+    IBOutlet UISearchBar *theSearchBar;
+    IBOutlet UITableView *theTableView;
+    
+    NSMutableArray *theHumanTXTObjects;
+    NSMutableArray *theHumanTXTHeadings;
+    
+    int allroundIndexPathRow;
 }
-- (IBAction)getHumansDotTXT:(id)sender;
-@property (strong, nonatomic) IBOutlet UITextField *urlField;
+//Methods
+- (void)getHumansDotTXT;
+
+//Properties
+@property (strong, nonatomic) IBOutlet UISearchBar *theSearchBar;
+@property (strong, nonatomic) IBOutlet UITableView *theTableView;
 
 @end

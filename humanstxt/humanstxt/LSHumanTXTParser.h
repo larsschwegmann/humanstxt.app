@@ -20,7 +20,6 @@
     NSMutableData *theData;
     NSURLConnection *theConnection;
     NSString *url;
-    
     //Delegate
     id<LSHumanTXTParserDelegate> _delegate;
 }

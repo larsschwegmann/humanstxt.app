@@ -39,6 +39,7 @@
     if (theContent && ![theContent isEqualToString:@""]) {
         NSMutableArray *array = [[NSMutableArray alloc] init];
         NSArray *lines = [theContent componentsSeparatedByString:@"\n"];
+        int sectionCount = 0;
         for (NSString *str in lines) {
             NSMutableDictionary *lineInfo = [[NSMutableDictionary alloc] init];
             if ([str isEqualToString:@""]) {
@@ -51,8 +52,10 @@
                 newStr = [str stringByReplacingOccurrencesOfString:@" " withString:@""];
                 newStr = [str stringByReplacingOccurrencesOfString:@"\n" withString:@""];
                 if (![newStr isEqualToString:@""]) {
+                    sectionCount++;
                     [lineInfo setObject:newStr forKey:@"content"];
                     [lineInfo setObject:@"true" forKey:@"heading"];
+                    [lineInfo setObject:[NSString stringWithFormat:@"%d", sectionCount] forKey:@"section"];
                     //add the dictionary to the array of modded lines
                     [array addObject:lineInfo];
                 }else{
@@ -65,6 +68,7 @@
                 if (![newStr isEqualToString:@""]) {
                     [lineInfo setObject:newStr forKey:@"content"];
                     [lineInfo setObject:@"false" forKey:@"heading"];
+                    [lineInfo setObject:[NSString stringWithFormat:@"%d", sectionCount] forKey:@"section"];
                     [array addObject:lineInfo];
                 }else{
                     //empty line
