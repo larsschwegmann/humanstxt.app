@@ -76,6 +76,9 @@
     }else if ([errorDescription isEqualToString:@"Unknown HTTP Error"]){
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No humans.txt :(" message:@"There was an error while fetching humans.txt! Please check if you typed everything correctly." delegate:self cancelButtonTitle:@"OK, I'll do that!" otherButtonTitles:nil];
         [alert show];
+    }else{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No humans.txt :(" message:@"There was an error while fetching humans.txt! Please check if you typed everything correctly." delegate:self cancelButtonTitle:@"OK, I'll do that!" otherButtonTitles:nil];
+        [alert show];
     }
 }
 
