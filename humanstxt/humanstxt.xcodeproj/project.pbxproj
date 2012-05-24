@@ -34,6 +34,9 @@
 		463A2B65156E932E00414F84 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 463A2B5B156E932D00414F84 /* Icon@2x.png */; };
 		463A2B66156E932E00414F84 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 463A2B5C156E932D00414F84 /* iTunesArtwork.png */; };
 		463A2B67156E932E00414F84 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 463A2B5D156E932D00414F84 /* iTunesArtwork@2x.png */; };
+		463A2B7A156E9E2F00414F84 /* ListViewControllerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 463A2B79156E9E2F00414F84 /* ListViewControllerCell.m */; };
+		463A2B7E156EA0B500414F84 /* cellselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 463A2B7C156EA0B500414F84 /* cellselected.png */; };
+		463A2B7F156EA0B500414F84 /* cellselected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 463A2B7D156EA0B500414F84 /* cellselected@2x.png */; };
 		464907F4156A737C007078EB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 464907F3156A737C007078EB /* UIKit.framework */; };
 		464907F6156A737C007078EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 464907F5156A737C007078EB /* Foundation.framework */; };
 		464907F8156A737C007078EB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 464907F7156A737C007078EB /* CoreGraphics.framework */; };
@@ -74,6 +77,10 @@
 		463A2B5B156E932D00414F84 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		463A2B5C156E932D00414F84 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		463A2B5D156E932D00414F84 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		463A2B78156E9E2F00414F84 /* ListViewControllerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewControllerCell.h; sourceTree = "<group>"; };
+		463A2B79156E9E2F00414F84 /* ListViewControllerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewControllerCell.m; sourceTree = "<group>"; };
+		463A2B7C156EA0B500414F84 /* cellselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cellselected.png; sourceTree = "<group>"; };
+		463A2B7D156EA0B500414F84 /* cellselected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cellselected@2x.png"; sourceTree = "<group>"; };
 		464907EF156A737C007078EB /* humanstxt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = humanstxt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		464907F3156A737C007078EB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		464907F5156A737C007078EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -132,6 +139,30 @@
 			name = "Icon v1";
 			sourceTree = "<group>";
 		};
+		463A2B80156EA0C000414F84 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				463A2B4F156E851500414F84 /* humanstxtlogonavbar2.png */,
+				463A2B50156E851500414F84 /* humanstxtlogonavbar2@2x.psd */,
+				463A2B4B156E843C00414F84 /* humanstxtlogonavbar.png */,
+				463A2B4C156E843C00414F84 /* humanstxtlogonavbar@2x.png */,
+				463A2B47156E81A000414F84 /* Intro.png */,
+				463A2B48156E81A000414F84 /* Intro@2x.png */,
+				463A2B7C156EA0B500414F84 /* cellselected.png */,
+				463A2B7D156EA0B500414F84 /* cellselected@2x.png */,
+				463A2B2D156D491900414F84 /* cell.png */,
+				463A2B2E156D491900414F84 /* cell@2x.png */,
+				463A2B1D156D3FA500414F84 /* tableheader.png */,
+				463A2B1E156D3FA500414F84 /* tableheader@2x.png */,
+				463A2B39156D5AE800414F84 /* tableheader2.png */,
+				463A2B3A156D5AE800414F84 /* tableheader2@2x.png */,
+				463A2B3D156D5D8900414F84 /* tableheader3.png */,
+				463A2B3E156D5D8900414F84 /* tableheader3@2x.png */,
+				463A2B13156BE8E800414F84 /* humanstxt-transparent-color.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		464907E4156A737B007078EB = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +202,8 @@
 				46490805156A737C007078EB /* ViewController.h */,
 				46490806156A737C007078EB /* ViewController.m */,
 				46490808156A737C007078EB /* ViewController.xib */,
+				463A2B78156E9E2F00414F84 /* ListViewControllerCell.h */,
+				463A2B79156E9E2F00414F84 /* ListViewControllerCell.m */,
 				464907FA156A737C007078EB /* Supporting Files */,
 			);
 			path = humanstxt;
@@ -180,21 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				463A2B53156E931500414F84 /* Icon v1 */,
-				463A2B4F156E851500414F84 /* humanstxtlogonavbar2.png */,
-				463A2B50156E851500414F84 /* humanstxtlogonavbar2@2x.psd */,
-				463A2B4B156E843C00414F84 /* humanstxtlogonavbar.png */,
-				463A2B4C156E843C00414F84 /* humanstxtlogonavbar@2x.png */,
-				463A2B47156E81A000414F84 /* Intro.png */,
-				463A2B48156E81A000414F84 /* Intro@2x.png */,
-				463A2B2D156D491900414F84 /* cell.png */,
-				463A2B2E156D491900414F84 /* cell@2x.png */,
-				463A2B1D156D3FA500414F84 /* tableheader.png */,
-				463A2B1E156D3FA500414F84 /* tableheader@2x.png */,
-				463A2B39156D5AE800414F84 /* tableheader2.png */,
-				463A2B3A156D5AE800414F84 /* tableheader2@2x.png */,
-				463A2B3D156D5D8900414F84 /* tableheader3.png */,
-				463A2B3E156D5D8900414F84 /* tableheader3@2x.png */,
-				463A2B13156BE8E800414F84 /* humanstxt-transparent-color.png */,
+				463A2B80156EA0C000414F84 /* images */,
 				464907FB156A737C007078EB /* humanstxt-Info.plist */,
 				464907FC156A737C007078EB /* InfoPlist.strings */,
 				464907FF156A737C007078EB /* main.m */,
@@ -281,6 +300,8 @@
 				463A2B65156E932E00414F84 /* Icon@2x.png in Resources */,
 				463A2B66156E932E00414F84 /* iTunesArtwork.png in Resources */,
 				463A2B67156E932E00414F84 /* iTunesArtwork@2x.png in Resources */,
+				463A2B7E156EA0B500414F84 /* cellselected.png in Resources */,
+				463A2B7F156EA0B500414F84 /* cellselected@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +317,7 @@
 				46490807156A737C007078EB /* ViewController.m in Sources */,
 				46490812156A73FF007078EB /* LSHumanTXTParser.m in Sources */,
 				463A2B0F156BCC0700414F84 /* NSString+BaseKit.m in Sources */,
+				463A2B7A156E9E2F00414F84 /* ListViewControllerCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

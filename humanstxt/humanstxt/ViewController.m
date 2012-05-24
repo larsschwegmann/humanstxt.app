@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "LSHumanTXTParser.h"
+#import "ListViewControllerCell.h"
 #import "NSString+BaseKit.h"
 #import <QuartzCore/QuartzCore.h>
 
@@ -224,22 +225,22 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *CellIdentifier = @"Cell";
     
-    UIView *theContentView;
-    UIImageView *backgroundView;
+    //UIView *theContentView;
+    //UIImageView *backgroundView;
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    ListViewControllerCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        theContentView = [[UIView alloc] init];
-        theContentView.tag = 0;
-        backgroundView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
-        backgroundView.image = [UIImage imageNamed:@"cell"];
-        backgroundView.tag = 1;
-        [theContentView addSubview:backgroundView];
-        [cell.contentView addSubview:theContentView];
+        cell = [[ListViewControllerCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        //theContentView = [[UIView alloc] init];
+        //theContentView.tag = 0;
+        //backgroundView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
+        //backgroundView.image = [UIImage imageNamed:@"cell"];
+        //backgroundView.tag = 1;
+        //[theContentView addSubview:backgroundView];
+        //[cell.contentView addSubview:theContentView];
     }else{
-        theContentView = (UIView *)[cell.contentView viewWithTag:0];
-        backgroundView = (UIImageView *)[[cell.contentView viewWithTag:0] viewWithTag:1];
+        //theContentView = (UIView *)[cell.contentView viewWithTag:0];
+        //backgroundView = (UIImageView *)[[cell.contentView viewWithTag:0] viewWithTag:1];
     }
     
     
@@ -257,8 +258,8 @@
     //NSLog(@"modified version of indexPath.section: %d", indexPath.section+1);
     //NSLog(@"section of content dictionary: %d", [[dict objectForKey:@"section"] intValue]);
     
-    [cell.textLabel setText:[dict objectForKey:@"content"]];
-    [cell.textLabel setBackgroundColor:[UIColor clearColor]];
+    [cell.mainLabel setText:[dict objectForKey:@"content"]];
+    //[cell.textLabel setBackgroundColor:[UIColor clearColor]];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }
