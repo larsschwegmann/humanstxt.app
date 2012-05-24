@@ -3,7 +3,7 @@ humanstxt.app
 
 Description
 -----------
-An App to retrieve and Parse the humans.txt File of a website. Will be released on the AppStore soon ;)
+An App to retrieve and Parse the humans.txt file of a website. Will be released on the AppStore soon ;)
 Visit http://humanstxt.org for more information on humans.txt.
 Please note that this App won't work for every humans.txt file.
 It was programmed to parse the Syntax declared at http://humanstxt.org/Standard.html.
@@ -45,4 +45,4 @@ If you need help or find a bug contact me via:
  * Email: larsob@me.com
 
 If you want to support this project, please help me with further development.
-If you are no developer, you can also buy me a coke by donating to my paypal account by clicking on this link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6CP86VYT57UU4
+If you are no developer, you can also buy me a coke by donating to my paypal account. Just click on this link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6CP86VYT57UU4
