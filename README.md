@@ -7,7 +7,7 @@ An App to retrieve and Parse the humans.txt File of a website. Will be released 
 Visit http://humanstxt.org for more information on humans.txt.
 Please note that this App won't work for every humans.txt file.
 It was programmed to parse the Syntax declared at http://humanstxt.org/Standard.html.
-Sites like Google (http://www.google.com/humans.txt) don't use it so this App won't display the Information correctly.
+Sites like Google (http://www.google.com/humans.txt) don't use the standard syntax, so this App won't display the Information correctly.
 
 License
 -------
