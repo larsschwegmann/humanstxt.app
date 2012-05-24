@@ -65,6 +65,8 @@
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
         [theParser startParsing];
     }else{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No humans.txt :(" message:@"Please type in a valid URL." delegate:self cancelButtonTitle:@"OK, I'll do that!" otherButtonTitles:nil];
+        [alert show];
         NSLog(@"ERROR: the URL is not valid: %@", theSearchBar.text);
     }
     
@@ -86,6 +88,7 @@
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No humans.txt :(" message:@"There was an error while fetching humans.txt! Please check if you typed everything correctly." delegate:self cancelButtonTitle:@"OK, I'll do that!" otherButtonTitles:nil];
         [alert show];
     }
+    theTableView.hidden = YES;
 }
 
 -(void)didSucceedWithInfo:(NSArray *)info{
