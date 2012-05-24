@@ -24,6 +24,7 @@
     [super viewDidLoad];
     theHumanTXTObjects = [[NSMutableArray alloc] init];
     theHumanTXTHeadings = [[NSMutableArray alloc] init];
+    theTableView.hidden = YES;
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -60,6 +61,7 @@
                 theParser = [[LSHumanTXTParser alloc] initWithURLString:[NSString stringWithFormat:@"%@/humans.txt",theSearchBar.text] delegate:self];
             }
         }
+        theTableView.hidden = NO;
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
         [theParser startParsing];
     }else{
@@ -128,6 +130,7 @@
     theHumanTXTHeadings = [[NSMutableArray alloc] init];
     theHumanTXTObjects = [[NSMutableArray alloc] init];
     [theTableView reloadData];
+    theTableView.hidden = YES;
 }
 
 #pragma mark UITableViewDataSource
