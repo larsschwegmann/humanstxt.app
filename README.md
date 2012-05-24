@@ -3,7 +3,8 @@ humanstxt.app
 
 Description
 -----------
-An App to retrieve an Parse the humans.txt File of a website.
+An App to retrieve and Parse the humans.txt File of a website. Will be released on the AppStore soon ;) Visit http://humanstxt.org for more information on humans.txt
+Please note that this App won't work for every humans.txt file. It was programmed to parse the Syntax declared at http://humanstxt.org/Standard.html. Sites like Google (http://www.google.com/humans.txt) don't use it so this App won't display the Information correctly.
 
 License
 -------
@@ -32,3 +33,13 @@ In addition to the BSD-2 license below, I ask that you do not publicly distribut
     CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
     OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
     OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    
+Support
+-------
+If you need help or find a bug contact me via:
+
+ * Twitter: @larsschwegmann
+ * Email: larsob@me.com
+
+If you want to support this project, please help me with further development.
+If you are no developer, you can also buy me a coke by donating to my paypal account by clicking on this link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6CP86VYT57UU4
