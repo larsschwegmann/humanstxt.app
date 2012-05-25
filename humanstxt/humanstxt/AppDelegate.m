@@ -18,9 +18,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    UINavigationController *navController = [[UINavigationController alloc] init];
     // Override point for customization after application launch.
     self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
-    self.window.rootViewController = self.viewController;
+    [navController pushViewController:self.viewController animated:NO];
+    [navController.navigationBar setBarStyle:UIBarStyleBlackOpaque];
+    self.window.rootViewController = navController;
     [self.window makeKeyAndVisible];
     return YES;
 }

@@ -21,6 +21,8 @@
     NSMutableArray *theHumanTXTHeadings;
     
     int allroundIndexPathRow;
+    
+    NSIndexPath *keepInMindIndex;
 }
 //Methods
 - (void)getHumansDotTXT;

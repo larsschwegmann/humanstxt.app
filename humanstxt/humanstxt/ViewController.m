@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "LSHumanTXTParser.h"
 #import "ListViewControllerCell.h"
+#import "DetailViewController.h"
 #import "NSString+BaseKit.h"
 #import <QuartzCore/QuartzCore.h>
 
@@ -26,6 +27,10 @@
     theHumanTXTObjects = [[NSMutableArray alloc] init];
     theHumanTXTHeadings = [[NSMutableArray alloc] init];
     theTableView.hidden = YES;
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"humanstxtlogonavbar2"]];
+    imageView.contentMode = UIViewContentModeScaleAspectFit;
+    imageView.frame = CGRectMake(50, 25, 216, 30);
+    [self.parentViewController.view.window addSubview:imageView];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -45,6 +50,13 @@
         return YES;
     }else{
         return NO;
+    }
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    if (keepInMindIndex) {
+        [theTableView deselectRowAtIndexPath:keepInMindIndex animated:YES];
+        keepInMindIndex = nil;
     }
 }
 
@@ -262,6 +274,14 @@
     //[cell.textLabel setBackgroundColor:[UIColor clearColor]];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    ListViewControllerCell *cell = (ListViewControllerCell *)[tableView cellForRowAtIndexPath:indexPath];
+    DetailViewController *detail = [[DetailViewController alloc] initWithContent:cell.mainLabel.text url:theSearchBar.text];
+    [self.navigationController pushViewController:detail animated:YES];
+    //[theTableView deselectRowAtIndexPath:indexPath animated:YES];
+    keepInMindIndex = indexPath;
 }
 
 @end
