@@ -46,6 +46,7 @@
 		463AE799156FC29700E41DEC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 463AE798156FC29700E41DEC /* MapKit.framework */; };
 		463AE79B156FC29E00E41DEC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 463AE79A156FC29E00E41DEC /* CoreLocation.framework */; };
 		463AE79E156FC51D00E41DEC /* MKMapView+ZoomLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 463AE79D156FC51D00E41DEC /* MKMapView+ZoomLevel.m */; };
+		463AE7A0156FE36A00E41DEC /* humanstxtlogonavbar2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 463AE79F156FE36A00E41DEC /* humanstxtlogonavbar2@2x.png */; };
 		464907F4156A737C007078EB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 464907F3156A737C007078EB /* UIKit.framework */; };
 		464907F6156A737C007078EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 464907F5156A737C007078EB /* Foundation.framework */; };
 		464907F8156A737C007078EB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 464907F7156A737C007078EB /* CoreGraphics.framework */; };
@@ -101,6 +102,7 @@
 		463AE79A156FC29E00E41DEC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		463AE79C156FC51D00E41DEC /* MKMapView+ZoomLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKMapView+ZoomLevel.h"; sourceTree = "<group>"; };
 		463AE79D156FC51D00E41DEC /* MKMapView+ZoomLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+ZoomLevel.m"; sourceTree = "<group>"; };
+		463AE79F156FE36A00E41DEC /* humanstxtlogonavbar2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "humanstxtlogonavbar2@2x.png"; sourceTree = "<group>"; };
 		464907EF156A737C007078EB /* humanstxt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = humanstxt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		464907F3156A737C007078EB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		464907F5156A737C007078EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -170,6 +172,7 @@
 				463A2B87156EB36200414F84 /* papercut@2x.png */,
 				463A2B4F156E851500414F84 /* humanstxtlogonavbar2.png */,
 				463A2B50156E851500414F84 /* humanstxtlogonavbar2@2x.psd */,
+				463AE79F156FE36A00E41DEC /* humanstxtlogonavbar2@2x.png */,
 				463A2B4B156E843C00414F84 /* humanstxtlogonavbar.png */,
 				463A2B4C156E843C00414F84 /* humanstxtlogonavbar@2x.png */,
 				463A2B47156E81A000414F84 /* Intro.png */,
@@ -340,6 +343,7 @@
 				463A2B89156EB36200414F84 /* papercut@2x.png in Resources */,
 				463AE752156FAACC00E41DEC /* papercut2.png in Resources */,
 				463AE753156FAACC00E41DEC /* papercut2@2x.png in Resources */,
+				463AE7A0156FE36A00E41DEC /* humanstxtlogonavbar2@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
