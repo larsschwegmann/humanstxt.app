@@ -1,12 +1,14 @@
 humanstxt.app
 =============
 
+[Humans.txt is available on the App Store](https://itunes.apple.com/us/app/humans.txt/id530167394?mt=8)
+
 Description
 -----------
-An App to retrieve and Parse the humans.txt file of a website. Will be released on the AppStore soon ;)
+An App to retrieve and parse the humans.txt file of a website.
 Visit http://humanstxt.org for more information on humans.txt.
 Please note that this App won't work for every humans.txt file.
-It was programmed to parse the Syntax declared at http://humanstxt.org/Standard.html.
+It was programmed to parse the syntax declared at http://humanstxt.org/standard.html.
 Sites like Google (http://www.google.com/humans.txt) don't use the standard syntax, so this App won't display the Information correctly.
 
 License
@@ -41,8 +43,8 @@ Support
 -------
 If you need help or find a bug contact me via:
 
- * Twitter: @larsschwegmann
- * Email: larsob@me.com
+ * Twitter: [@larsschwegmann](https://twitter.com/larsschwegmann)
+ * Email: [larsob@me.com](mailto:larsob@me.com)
 
 If you want to support this project, please help me with further development.
-If you are no developer, you can also buy me a coke by donating to my paypal account. Just click on this link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6CP86VYT57UU4
+If you are no developer, you can also buy me a coke by donating to my paypal account. Just click on this link: [https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6CP86VYT57UU4](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6CP86VYT57UU4)
